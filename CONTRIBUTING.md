@@ -18,6 +18,8 @@ swift build --product Relay
 
 The package deliberately uses Swift 5 language mode with a Swift 6 toolchain. Do not claim Swift 6 strict-concurrency compliance. `RelayTests` is an executable test harness; failed expectations produce a nonzero exit status.
 
+For installation from source, see [Build locally](docs/INSTALL.md#build-locally). Package an Apple Silicon release with `./Scripts/package-release.sh`. See [Architecture](docs/ARCHITECTURE.md) for the code layout and link-processing flow, and [Testing](docs/TESTING.md) for the broader test plan.
+
 ## Code conventions
 
 - Follow Swift API naming conventions, use four-space indentation, and match surrounding code.
