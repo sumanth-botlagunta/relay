@@ -22,3 +22,28 @@ flowchart LR
 UI state is main-actor isolated. Incoming links share a serial queue whose active request is identified by UUID. Browser launch completion or recovery releases that request; stale callbacks cannot release another request. Routing is resolved when a request reaches the front, so a rule just saved can apply to the next link.
 
 Settings use a versioned JSON format and atomic writes. Unsupported future schemas remain read-only; corrupt settings are preserved for recovery. OS-level registration and permissions are managed by macOS, outside the settings file.
+
+## How links flow
+
+```mermaid
+flowchart TD
+    A[Click a web link in another app] --> B[Relay validates the address]
+    B --> C[Optional tracking cleanup and local warnings]
+    C --> D{Warning or held override key?}
+    D -->|Yes| P[Show browser picker]
+    D -->|No| R{Routing decision}
+    R -->|Pause| F[Primary browser]
+    R -->|Temporary default| T[Temporary browser]
+    R -->|First matching rule| M[Saved browser or Chrome profile]
+    R -->|No match| P
+    P --> O[Open the selected destination]
+    F --> O
+    T --> O
+    M --> O
+    O --> Q[Continue with the next waiting link]
+```
+
+Rules run in order; the first match wins. Suspicious-link warnings still ask before an automatic route when warnings are enabled. The picker shows queued links, keeps browsers in the background while choices remain, and brings the last selected browser forward when finished.
+
+
+[Back to README](../README.md) · [Development guide](../CONTRIBUTING.md)
