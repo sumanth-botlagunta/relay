@@ -1,0 +1,25 @@
+.build/
+dist/
+.DS_Store
+Resources/AppIcon.iconset/
+Resources/icon-1024.png
+
+# Local working notes, credentials, settings, and editor state
+docs/AGENT-PROMPT.md
+.agents/
+.codex/
+.env
+.env.*
+*.pem
+*.p12
+*.p8
+*.key
+*.mobileprovision
+*.xcuserstate
+xcuserdata/
+.swiftpm/
+settings.json
+settings.json.*
+
+__pycache__/
+*.pyc

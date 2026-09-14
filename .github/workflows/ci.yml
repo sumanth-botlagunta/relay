@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    name: Test and build
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Privacy checks
+        run: python3 Scripts/check-public-content.py
+      - name: Regression tests
+        run: swift run --disable-sandbox RelayTests
+      - name: Build signed app bundle
+        run: ./Scripts/build.sh
+      - name: Validate app compatibility
+        run: python3 Scripts/validate-bundle.py
+      - name: Validate packaging scripts
+        run: bash -n Scripts/build.sh Scripts/package-release.sh

@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest a useful improvement.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe a real workflow and what gets in your way.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggested improvement
+      description: What should Relay do? Include alternatives if useful.

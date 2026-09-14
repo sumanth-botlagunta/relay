@@ -1,0 +1,33 @@
+name: Bug report
+description: Report something that does not work as expected.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Use example.com links and remove personal information from screenshots. For security vulnerabilities, use private vulnerability reporting instead."
+  - type: input
+    id: version
+    attributes:
+      label: Relay version
+      description: Find this in Settings → Setup & Help.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: macOS version and browser
+      placeholder: macOS 15, Safari; Apple Silicon
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, what happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or other details
+      description: Remove real links, profile names, email addresses, and local paths.

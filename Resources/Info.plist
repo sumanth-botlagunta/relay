@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key><string>Relay</string>
+	<key>CFBundleDisplayName</key><string>Relay</string>
+	<key>CFBundleIdentifier</key><string>org.relaybrowser.Relay</string>
+	<key>CFBundleExecutable</key><string>Relay</string>
+	<key>CFBundlePackageType</key><string>APPL</string>
+	<key>CFBundleShortVersionString</key><string>1.3.0</string>
+	<key>CFBundleVersion</key><string>5</string>
+	<key>CFBundleIconFile</key><string>AppIcon</string>
+	<key>LSMinimumSystemVersion</key><string>15.0</string>
+	<key>LSUIElement</key><true/>
+	<key>NSPrincipalClass</key><string>NSApplication</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Relay reads the current tab’s address so you can send it to another browser.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key><string>Web URLs</string>
+			<key>CFBundleTypeRole</key><string>Viewer</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>http</string>
+				<string>https</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key><string>Web content</string>
+			<key>CFBundleTypeRole</key><string>Viewer</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.html</string>
+				<string>public.url</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
