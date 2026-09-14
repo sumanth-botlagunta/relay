@@ -11,7 +11,7 @@
 [**Download Relay for Mac →**](https://github.com/sumanth-botlagunta/relay/releases/latest) · [Installation help](docs/INSTALL.md) · [Report a bug](https://github.com/sumanth-botlagunta/relay/issues/new/choose) · [Contribute](CONTRIBUTING.md)
 
 <p align="center">
-  <img src="docs/images/picker.jpg" alt="Relay macOS browser picker showing Google Chrome and Safari for an example.com link, with keyboard shortcuts and a remember-domain option" width="390">
+  <img src="docs/images/picker.png" alt="Relay browser picker showing Safari, Google Chrome, Incognito, and sample Personal and Work profiles with keyboard shortcuts" width="390">
 </p>
 
 ## Why Relay?
@@ -66,9 +66,15 @@ Rules run in order; the first match wins. Suspicious-link warnings still ask bef
 
 | Inspect a cleaned link | Set up your preferences |
 | --- | --- |
-| <img src="docs/images/link-details.jpg" alt="Relay link details showing the cleaned example.com destination and an option to open the original URL with its tracking parameter" width="310"> | <img src="docs/images/settings.jpg" alt="Relay General settings with primary browser, launch at login, tracking cleanup, suspicious-link warnings, and keyboard shortcut controls" width="560"> |
+| <img src="docs/images/link-details.png" alt="Relay link details showing the cleaned example.com destination and an option to open the original URL with its tracking parameter" width="310"> | <img src="docs/images/settings.png" alt="Relay General settings with primary browser, launch at login, tracking cleanup, suspicious-link warnings, and keyboard shortcut controls" width="560"> |
 
-Screenshots show the real app using a synthetic `example.com` link. Available browsers and profile names depend on your Mac.
+[**View all seven interfaces in the full-resolution gallery →**](docs/GALLERY.md)
+
+| Automate familiar sites | Handle several links |
+| --- | --- |
+| <img src="docs/images/rules.png" alt="Relay routing rules sending github.com to a sample Work Chrome profile, example.com to Safari, and example.org to Incognito" width="520"> | <img src="docs/images/link-queue.png" alt="Relay picker with three queued links, a waiting count, and Skip and dismiss-all controls" width="300"> |
+
+These high-resolution images render Relay’s actual interface at 3× resolution with illustrative domains and profile names. Available browsers and settings depend on your Mac. No personal browsing data is shown.
 
 ## Keyboard shortcuts
 
